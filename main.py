@@ -61,7 +61,7 @@ class Comment(db.Model):
 
     post_id = db.Column(db.Integer, db.ForeignKey("blog_posts.id"))
     parent_post = relationship("BlogPost", back_populates="comments")
-    text = db.Column(db.Text(300))
+    text = db.Column(db.Text)
 
 db.create_all()
 
